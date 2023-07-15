@@ -35,3 +35,4 @@ jobs:
         with:
           branch: build # 打包的内容放到build分支下
           folder: docs-dist # 你打包后存放的文件
+          ACCESS_TOKEN: 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
