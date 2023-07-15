@@ -1,7 +1,10 @@
 import { defineConfig } from 'dumi';
 
+const repo = 'lh-ui-react'
 export default defineConfig({
   outputPath: 'docs-dist',
+  base: process.env.NODE_ENV === 'production' ? `/${repo}/` : '/',
+  publicPath: process.env.NODE_ENV === 'production' ? `/${repo}/` : '/',
   themeConfig: {
     name: 'lh-ui-react',
     logo: '/logo.png', // 读取public文件夹

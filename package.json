@@ -50,5 +50,12 @@
     "react-dom": "^18.0.0",
     "stylelint": "^14.9.1"
   },
-  "dependencies": {}
+  "dependencies": {},
+  "keywords": [
+    "lh-ui-react",
+    "ui",
+    "components",
+    "react",
+    "typescript"
+  ]
 }
