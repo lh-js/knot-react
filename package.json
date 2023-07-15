@@ -50,7 +50,5 @@
     "react-dom": "^18.0.0",
     "stylelint": "^14.9.1"
   },
-  "dependencies": {
-    "babel-plugin-import": "^1.13.6"
-  }
+  "dependencies": {}
 }
