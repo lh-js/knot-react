@@ -22,14 +22,10 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 16.x
+          registry-url: https://registry.npmjs.org
 
       # 发包到npm
       - name: publish to npm
-        # uses: actions/checkout@v1
-        uses: actions/setup-node@v1
-        with:
-          node-version: 16.x
-          registry-url: https://registry.npmjs.org
         run: |
           git config --global user.name "lh"
           git config --global user.email "2731164534@qq.com"
