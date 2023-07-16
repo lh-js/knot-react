@@ -48,6 +48,7 @@ jobs:
       - run: |
           git config --global user.name "lh"
           git config --global user.email "2731164534@qq.com"
+          npm install
           npm version patch
           npm publish
         env:
