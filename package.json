@@ -50,7 +50,9 @@
     "react-dom": "^18.0.0",
     "stylelint": "^14.9.1"
   },
-  "dependencies": {},
+  "dependencies": {
+    "@babel/runtime": "^7.22.6"
+  },
   "keywords": [
     "lh-ui-react",
     "ui",
