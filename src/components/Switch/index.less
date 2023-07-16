@@ -4,10 +4,11 @@
   box-sizing: border-box;
   width: var(--width);
   height: var(--height);
-  overflow: hidden;
   background: #888888;
   border-radius: calc(var(--height) / 2);
   transition: all 0.5s ease-in-out;
+  // overflow: hidden;//safari浏览器短暂失效，猜测是受到过渡属性影响，替换为以下属性
+  contain: paint;
 
   .switch-label {
     display: flex;

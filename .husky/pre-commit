@@ -1,0 +1,4 @@
+#!/usr/bin/env sh
+
+# 代码commit之前
+# node precommit.js
