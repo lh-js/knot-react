@@ -22,8 +22,10 @@ or
 yarn add lh-ui-react
 ```
 
-## 引入样式文件
+## 使用示例
 
 ```bash
-@import 'lh-ui-react/dist/umd/lh-ui-react.min.css';
+import { Hello } from 'lh-ui-react';
+
+export default () => <Hello title="Hello React!" />;
 ```

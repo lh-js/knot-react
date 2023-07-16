@@ -24,13 +24,15 @@ jobs:
           node-version: 16.x
           registry-url: https://registry.npmjs.org
 
+      # 安装依赖
+      - name: dependencies install
+        run: npm install
+
       # 发包到npm
-      - name: publish to npm
-        run: |
-          npm install
-          npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+      # - name: publish to npm
+      #   run: npm publish
+      #   env:
+      #     NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
       # 打包代码
       - name: Build Project
