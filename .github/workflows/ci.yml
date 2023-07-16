@@ -23,6 +23,20 @@ jobs:
         with:
           node-version: 16.x
 
+      # 发包到npm
+      - name: publish to npm
+        with:
+          registry-url: https://registry.npmjs.org
+        run: |
+          git config --global user.name "lh"
+          git config --global user.email "2731164534@qq.com"
+          npm install
+          npm version patch
+          npm publish
+          git push origin develop
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
       # 打包代码
       - name: Build Project
         run: |
@@ -36,20 +50,3 @@ jobs:
           branch: build # 打包的内容放到build分支下
           folder: docs-dist # 你打包后存放的文件
           ACCESS_TOKEN: ${{secrets.LHUIBUILD}}
-
-  publish-npm:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v1
-      - uses: actions/setup-node@v1
-        with:
-          node-version: 16.x
-          registry-url: https://registry.npmjs.org
-      - run: |
-          git config --global user.name "lh"
-          git config --global user.email "2731164534@qq.com"
-          npm install
-          npm version patch
-          npm publish
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
