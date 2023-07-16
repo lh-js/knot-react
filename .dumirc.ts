@@ -13,7 +13,7 @@ export default defineConfig({
       { title: '组件', link: '/components/hello' },
     ],
     socialLinks: {
-      github: 'https://github.com/lh2731164534/lh-ui-react'
+      github: 'https://github.com/lh-js/lh-ui-react'
     }
   },
   apiParser: {},

@@ -7,7 +7,7 @@
   "scripts": {
     "start": "npm run dev",
     "dev": "dumi dev",
-    "build": "father build",
+    "build": "father build && node build",
     "build:watch": "father dev",
     "docs:build": "dumi build",
     "prepare": "husky install && dumi setup",
