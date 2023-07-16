@@ -26,14 +26,7 @@ jobs:
 
       # 发包到npm
       - name: publish to npm
-        run: |
-          git config --global user.name "lh"
-          git config --global user.email "2731164534@qq.com"
-          npm install
-          git add .
-          git commit -m 'npm 发布'
-          npm version patch
-          npm publish
+        run: npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
