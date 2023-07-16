@@ -26,14 +26,15 @@ jobs:
 
       # 发包到npm
       - name: publish to npm
-        run: npm publish
+        run: |
+          npm install
+          npm publish
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
       # 打包代码
       - name: Build Project
         run: |
-          npm install      
           npm run docs:build
 
       # 部署到github
