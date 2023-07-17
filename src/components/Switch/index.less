@@ -10,6 +10,17 @@
   // overflow: hidden;//safari浏览器短暂失效，猜测是受到过渡属性影响，替换为以下属性
   contain: paint;
 
+  .off-text {
+    content: var(--offText);
+    position: absolute;
+    right: var(--textPadding);
+    font-size: var(--textSize);
+    color: #ffffff;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+  }
+
   .switch-label {
     display: flex;
     align-items: center;
@@ -19,15 +30,28 @@
     border-radius: var(--height);
     transform: translateX(var(--translateX));
     transition: all 0.5s ease-in-out;
-  }
-
-  .switch-label::after {
     position: absolute;
-    right: var(--circleRight);
-    width: var(--circleWidth);
-    height: var(--circleWidth);
-    background: #ffffff;
-    border-radius: var(--circleWidth);
-    content: '';
+    z-index: 1;
+
+    &::after {
+      position: absolute;
+      right: var(--circleRight);
+      width: var(--circleWidth);
+      height: var(--circleWidth);
+      background: #ffffff;
+      border-radius: var(--circleWidth);
+      content: '';
+    }
+
+    .on-text {
+      position: absolute;
+      left: var(--textPadding);
+      color: #ffffff;
+      font-size: var(--textSize);
+      content: var(--onText);
+      z-index: 2;
+      display: flex;
+      align-items: center;
+    }
   }
 }
