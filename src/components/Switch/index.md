@@ -5,6 +5,7 @@ nav:
 
 group:
   title: Switch
+  order: 2
 ---
 
 ## Switch
@@ -15,6 +16,14 @@ group:
 import { Switch } from 'lh-ui-react';
 
 export default () => <Switch />;
+```
+
+## 禁用:
+
+```tsx
+import { Switch } from 'lh-ui-react';
+
+export default () => <Switch disabled />;
 ```
 
 ## 大小定义:

@@ -12,6 +12,11 @@ type Param = {
    */
   size?: number;
   /**
+   * @description 是否禁用
+   * @default false
+   */
+  disabled?: boolean;
+  /**
    * @description 开启状态显示（文字最大长度为1）
    * @default
    */
@@ -31,6 +36,7 @@ type Param = {
 export default ({
   isChecked = false,
   size = 1,
+  disabled = false,
   onText = '',
   offText = '',
   onChange,
@@ -38,12 +44,15 @@ export default ({
   const [isOn, setIsOn] = useState(isChecked);
 
   const switchClick = () => {
+    if (disabled) return;
     onChange && onChange(!isOn);
     setIsOn(!isOn);
   };
   return (
     <div
-      className="switch"
+      className={`switch ${disabled ? 'disabed' : ''} ${
+        isOn ? 'on-color' : 'off-color'
+      }`}
       style={{
         //定义css变量，忽略ts检查
         //@ts-ignore
@@ -52,7 +61,6 @@ export default ({
         '--circleWidth': `${size * (22 - 4)}px`, //圆形label直径
         '--circleRight': `${2 * size}px`, //圆形label到边缘距离
         '--translateX': isOn ? 0 : `${-22 * size}px`, //label移动距离
-        '--background': isOn ? '#1677ff' : '#888888', //开关颜色
         '--textPadding': `${size * 8}px`, //文字距离边缘距离
         '--textSize': `${size * 12}px`, //文字大小
         '--onText': onText,
@@ -63,7 +71,7 @@ export default ({
       <span className="off-text">
         {typeof offText == 'string' ? offText.slice(0, 1) : offText}
       </span>
-      <div className="switch-label">
+      <div className={`switch-label`}>
         <span className="on-text">
           {typeof onText == 'string' ? onText.slice(0, 1) : onText}
         </span>
