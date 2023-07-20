@@ -17,3 +17,7 @@ import { Button } from 'lh-ui-react';
 
 export default () => <Button />;
 ```
+
+## API
+
+<API id="Button"></API>
