@@ -4,7 +4,7 @@ nav:
   path: /components
 
 group:
-  title: Switch
+  title: 表单组件
   order: 2
 ---
 

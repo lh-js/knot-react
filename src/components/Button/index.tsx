@@ -1,3 +1,4 @@
+import { OutWave } from 'lh-ui-react';
 import React from 'react';
 
 type Param = {
@@ -13,14 +14,16 @@ type Param = {
   height?: number;
 };
 export default ({ width = 74, height = 34 }: Param) => (
-  <button
-    className="button"
-    style={{
-      //@ts-ignore
-      '--width': `${width}px`,
-      '--height': `${height}px`,
-    }}
-  >
-    点击
-  </button>
+  <OutWave>
+    <button
+      className="button"
+      style={{
+        //@ts-ignore
+        '--width': `${width}px`,
+        '--height': `${height}px`,
+      }}
+    >
+      点击
+    </button>
+  </OutWave>
 );

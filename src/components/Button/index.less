@@ -10,34 +10,9 @@
   border-radius: 2px;
   cursor: pointer;
   transition: 0.3s;
-  position: relative;
-  z-index: 2;
 
   &:not(.disabled):hover {
     color: @main-color;
     border-color: currentColor;
-  }
-
-  &::after {
-    content: '';
-    width: inherit;
-    height: inherit;
-    position: absolute;
-    border-radius: inherit;
-    opacity: 1;
-    transition: 0.3s;
-    box-shadow: 0 0 0 8px @main-color;
-    left: -1px;
-    top: -1px;
-    z-index: 1;
-    opacity: 0;
-    transition: 0.5s;
-  }
-
-  /*点击*/
-  &:not(.disabled):active::after {
-    opacity: 0.8;
-    transition: 0s;
-    box-shadow: none;
   }
 }

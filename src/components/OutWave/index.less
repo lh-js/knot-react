@@ -1,0 +1,33 @@
+.out-wave {
+  display: inline-block;
+  border-radius: var(--radius);
+  position: relative;
+
+  &::after {
+    content: '';
+    display: block;
+    width: var(--width);
+    height: var(--height);
+    border-radius: var(--radius);
+    box-shadow: 0 0 0 8px @main-color;
+    top: 0;
+    opacity: 0;
+    transition: 0.5s;
+    position: absolute;
+    pointer-events: none;
+  }
+
+  /*点击*/
+  &:not(.disabled):active::after {
+    opacity: 0.8;
+    transition: 0s;
+    box-shadow: none;
+  }
+}
+
+.div {
+  width: 74px;
+  height: 34px;
+  border-radius: 2px;
+  border: 1px solid;
+}
