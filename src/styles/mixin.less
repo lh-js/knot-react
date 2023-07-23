@@ -1,7 +1,14 @@
-.main-opacity(@opacity) {
-  background: rgba(@main-color, @opacity);
+.background-opacity(@color,@opacity) {
+  background: rgba(@color, @opacity);
 }
 
-.black-opacity(@opacity) {
-  background: rgba(@black-color, @opacity);
+.button-theme(@color) {
+  background-color: @color;
+  color: @white-color;
+}
+
+.button-hover(@color) {
+  color: @white-color;
+  border-color: @color;
+  .background-opacity(@color,0.8);
 }

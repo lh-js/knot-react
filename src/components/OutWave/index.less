@@ -18,8 +18,20 @@
     pointer-events: none;
   }
 
+  &:where(.success)::after {
+    box-shadow: 0 0 0 var(--shadowWidth) @success-color;
+  }
+
+  &:where(.warning)::after {
+    box-shadow: 0 0 0 var(--shadowWidth) @warn-color;
+  }
+
+  &:where(.danger)::after {
+    box-shadow: 0 0 0 var(--shadowWidth) @danger-color;
+  }
+
   /*点击*/
-  &:not(.disabled):active::after {
+  &:not(.disabled):not(.text):active::after {
     opacity: 0.8;
     transition: 0s;
     box-shadow: none;

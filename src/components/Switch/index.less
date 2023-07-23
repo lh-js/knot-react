@@ -9,20 +9,6 @@
   // overflow: hidden;//safari浏览器短暂失效，猜测是受到过渡属性影响，替换为以下属性
   contain: paint;
   cursor: pointer;
-  // box-shadow: 0 0 0 6px @main-color;
-
-  &::after {
-    /*其他样式*/
-    // opacity: 0;
-    box-shadow: 0 0 0 6px @main-color;
-    transition: 0.3s;
-  }
-  /*点击*/
-  &:active::after {
-    box-shadow: none;
-    opacity: 0.4;
-    transition: 0s; /*取消过渡*/
-  }
 
   .off-text {
     content: var(--offText);
@@ -70,17 +56,17 @@
 }
 
 .on-color {
-  .main-opacity(1);
+  .background-opacity(@main-color,1);
 
   &:not(.disabled):hover {
-    .main-opacity(0.85);
+    .background-opacity(@main-color,0.85);
   }
 }
 
 .off-color {
-  .black-opacity(0.25);
+  .background-opacity(@black-color,0.25);
 
   &:not(.disabled):hover {
-    .black-opacity(0.45);
+    .background-opacity(@black-color,0.45);
   }
 }

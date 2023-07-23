@@ -18,10 +18,27 @@ type Param = {
    */
   height?: number;
   /**
+   * @description 按钮类型
+   * @default default
+   */
+  type?:
+    | 'default'
+    | 'dashed'
+    | 'text'
+    | 'primary'
+    | 'success'
+    | 'warning'
+    | 'danger';
+  /**
    * @description 是否禁用
    * @default false
    */
   disabled?: boolean;
+  /**
+   * @description 是否显示波纹特效
+   * @default true
+   */
+  isWave?: boolean;
   /**
    * @description 点击回调函数
    */
@@ -31,7 +48,9 @@ export default ({
   children = 'Default',
   width = 74,
   height = 34,
+  type = 'default',
   disabled = false,
+  isWave = true,
   onClick,
 }: Param) => {
   const buttonClick = () => {
@@ -40,10 +59,14 @@ export default ({
   };
 
   return (
-    <OutWave disabled={disabled}>
+    <OutWave
+      //@ts-ignore
+      type={type}
+      disabled={disabled || !isWave}
+    >
       <button
         children={children}
-        className={`button ${disabled ? 'disabled' : ''}`}
+        className={`button ${disabled ? 'disabled' : ''} ${type}`}
         style={{
           //@ts-ignore
           '--width': `${width}px`,

@@ -11,12 +11,22 @@ type Param = {
    */
   shadowWidth?: number;
   /**
+   * @description 波纹类型
+   * @default primary
+   */
+  type?: 'primary' | 'success' | 'warning' | 'danger';
+  /**
    * @description 是否禁用
    * @default false
    */
   disabled?: boolean;
 };
-export default ({ children, shadowWidth = 8, disabled = false }: Param) => {
+export default ({
+  children,
+  shadowWidth = 8,
+  type = 'primary',
+  disabled = false,
+}: Param) => {
   const parentRef = useRef<HTMLDivElement>(null);
   const [divStyle, setDivStyle] = useState<CSSStyleDeclaration>();
   useEffect(() => {
@@ -50,7 +60,7 @@ export default ({ children, shadowWidth = 8, disabled = false }: Param) => {
     <div
       ref={parentRef}
       children={children}
-      className={`out-wave ${disabled ? 'disabled' : ''}`}
+      className={`out-wave ${disabled ? 'disabled' : ''} ${type}`}
       style={{
         //@ts-ignore
         '--width': divStyle?.width,

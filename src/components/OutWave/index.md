@@ -27,6 +27,34 @@ export default () => {
 };
 ```
 
+## 波纹类型:
+
+```tsx
+import { OutWave } from 'lh-ui-react';
+
+export default () => {
+  function App() {
+    return <div className="div"></div>;
+  }
+  return (
+    <div className="components-box">
+      <OutWave type="primary">
+        <App />
+      </OutWave>
+      <OutWave type="success">
+        <App />
+      </OutWave>
+      <OutWave type="warning">
+        <App />
+      </OutWave>
+      <OutWave type="danger">
+        <App />
+      </OutWave>
+    </div>
+  );
+};
+```
+
 ## API
 
 <API id="OutWave"></API>

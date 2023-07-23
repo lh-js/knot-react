@@ -15,4 +15,54 @@
     color: @main-color;
     border-color: currentColor;
   }
+
+  &:where(.dashed) {
+    border: 1px dashed;
+  }
+
+  &:where(.dashed):not(.disabled):hover {
+    color: @main-color;
+    border-color: currentColor;
+  }
+
+  &:where(.text) {
+    border: none;
+  }
+
+  &:where(.text):not(.disabled):hover {
+    color: @main-color;
+    border-color: currentColor;
+  }
+
+  &:where(.primary) {
+    .button-theme(@main-color);
+  }
+
+  &:where(.primary):not(.disabled):hover {
+    .button-hover(@main-color);
+  }
+
+  &:where(.success) {
+    .button-theme(@success-color);
+  }
+
+  &:where(.success):not(.disabled):hover {
+    .button-hover(@success-color);
+  }
+
+  &:where(.warning) {
+    .button-theme(@warn-color);
+  }
+
+  &:where(.warning):not(.disabled):hover {
+    .button-hover(@warn-color);
+  }
+
+  &:where(.danger) {
+    .button-theme(@danger-color);
+  }
+
+  &:where(.danger):not(.disabled):hover {
+    .button-hover(@danger-color);
+  }
 }
