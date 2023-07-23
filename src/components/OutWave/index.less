@@ -2,6 +2,7 @@
   display: inline-block;
   border-radius: var(--radius);
   position: relative;
+  cursor: pointer;
 
   &::after {
     content: '';
@@ -9,7 +10,7 @@
     width: var(--width);
     height: var(--height);
     border-radius: var(--radius);
-    box-shadow: 0 0 0 8px @main-color;
+    box-shadow: 0 0 0 var(--shadowWidth) @main-color;
     top: 0;
     opacity: 0;
     transition: 0.5s;

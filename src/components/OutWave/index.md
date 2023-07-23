@@ -5,7 +5,7 @@ nav:
 
 group:
   title: 特效
-  order: 1
+  order: 3
 ---
 
 ## OutWave
@@ -26,3 +26,7 @@ export default () => {
   );
 };
 ```
+
+## API
+
+<API id="OutWave"></API>

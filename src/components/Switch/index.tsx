@@ -27,8 +27,7 @@ type Param = {
    */
   offText?: string;
   /**
-   * @description 状态改变事件
-   *
+   * @description 状态改变回调函数
    */
   onChange?: (isChecked: boolean) => void;
 };
@@ -48,10 +47,11 @@ export default ({
     onChange && onChange(!isOn);
     setIsOn(!isOn);
   };
+
   return (
     <OutWave disabled={disabled}>
       <div
-        className={`switch ${disabled ? 'disabed' : ''} ${
+        className={`switch ${disabled ? 'disabled' : ''} ${
           isOn ? 'on-color' : 'off-color'
         }`}
         style={{
