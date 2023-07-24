@@ -1,0 +1,31 @@
+.space {
+  gap: var(--spaceSize);
+  display: inline-flex;
+  align-items: center;
+
+  &:where(.vertical) {
+    flex-direction: column;
+  }
+
+  &:where(.start) {
+    align-items: flex-start;
+  }
+
+  &:where(.end) {
+    align-items: flex-end;
+  }
+
+  &:where(.baseline) {
+    align-items: baseline;
+  }
+
+  &:where(.wrap) {
+    flex-wrap: wrap;
+  }
+
+  .item {
+    width: 100px;
+    height: 50px;
+    border: 1px solid;
+  }
+}

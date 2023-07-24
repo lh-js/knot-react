@@ -30,14 +30,14 @@ export default () => {
 ## 波纹类型:
 
 ```tsx
-import { OutWave } from 'lh-ui-react';
+import { OutWave, Space } from 'lh-ui-react';
 
 export default () => {
   function App() {
     return <div className="div"></div>;
   }
   return (
-    <div className="components-box">
+    <Space>
       <OutWave type="primary">
         <App />
       </OutWave>
@@ -50,7 +50,7 @@ export default () => {
       <OutWave type="danger">
         <App />
       </OutWave>
-    </div>
+    </Space>
   );
 };
 ```

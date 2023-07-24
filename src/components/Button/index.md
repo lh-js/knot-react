@@ -21,10 +21,10 @@ export default () => <Button />;
 ## 按钮类型:
 
 ```tsx
-import { Button } from 'lh-ui-react';
+import { Button, Space } from 'lh-ui-react';
 
 export default () => (
-  <div className="components-box">
+  <Space>
     <Button />
     <Button type="dashed111" />
     <Button type="text" />
@@ -32,7 +32,7 @@ export default () => (
     <Button type="success" />
     <Button type="warning" />
     <Button type="danger" />
-  </div>
+  </Space>
 );
 ```
 
