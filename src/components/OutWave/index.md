@@ -37,7 +37,7 @@ export default () => {
     return <div className="div"></div>;
   }
   return (
-    <Space>
+    <Space wrap>
       <OutWave type="primary">
         <App />
       </OutWave>

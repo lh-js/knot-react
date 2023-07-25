@@ -24,7 +24,7 @@ export default () => <Button />;
 import { Button, Space } from 'lh-ui-react';
 
 export default () => (
-  <Space>
+  <Space wrap>
     <Button />
     <Button type="dashed111" />
     <Button type="text" />

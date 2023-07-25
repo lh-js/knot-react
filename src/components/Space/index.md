@@ -62,7 +62,7 @@ import { Space } from 'lh-ui-react';
 
 export default () => {
   return (
-    <Space wrap spaceSize={100}>
+    <Space wrap>
       <div className="item"></div>
       <div className="item"></div>
       <div className="item"></div>
