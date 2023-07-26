@@ -17,28 +17,47 @@ import { Col, Row } from 'lh-ui-react';
 
 export default () => {
   return (
-    <Col>
-      <Row span={6}>
+    <Row gutters={[8, 8]}>
+      <Col span={6}>
         <div className="grid-item"></div>
-      </Row>
-      <Row span={6}>
+      </Col>
+      <Col span={6}>
         <div className="grid-item"></div>
-      </Row>
-      <Row span={6}>
+      </Col>
+      <Col span={6}>
         <div className="grid-item"></div>
-      </Row>
-      <Row span={6}>
+      </Col>
+      <Col span={6}>
         <div className="grid-item"></div>
-      </Row>
-    </Col>
+      </Col>
+    </Row>
   );
 };
 ```
 
-## Col API
+## 偏移:
 
-<API id="Col"></API>
+```tsx
+import { Col, Row } from 'lh-ui-react';
+
+export default () => {
+  return (
+    <Row>
+      <Col span={6}>
+        <div className="grid-item"></div>
+      </Col>
+      <Col span={6} offset={6}>
+        <div className="grid-item"></div>
+      </Col>
+    </Row>
+  );
+};
+```
 
 ## Row API
 
 <API id="Row"></API>
+
+## Col API
+
+<API id="Col"></API>

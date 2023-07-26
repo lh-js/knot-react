@@ -1,19 +1,22 @@
 .col {
   display: flex;
   flex-flow: row wrap;
-  gap: var(--gutter);
   box-sizing: border-box;
+  margin: 0 calc(0px - var(--gutterH) / 2);
+  row-gap: var(--gutterV);
 
   .row {
     display: flex;
     flex: 0 0 var(--span);
     max-width: var(--span);
     box-sizing: border-box;
+    padding: 0 calc(var(--gutterH) / 2);
+    margin-inline-start: var(--offset);
   }
 }
 
 .grid-item {
-  background: gray;
+  background: @main-color;
   height: 100px;
   width: 100%;
   border: 1px solid;

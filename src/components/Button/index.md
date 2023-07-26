@@ -26,7 +26,7 @@ import { Button, Space } from 'lh-ui-react';
 export default () => (
   <Space wrap>
     <Button />
-    <Button type="dashed111" />
+    <Button type="dashed" />
     <Button type="text" />
     <Button type="primary" />
     <Button type="success" />
