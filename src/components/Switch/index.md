@@ -88,6 +88,24 @@ export default () => {
 };
 ```
 
+```tsx
+import { Switch } from 'lh-ui-react';
+import { useState } from 'react';
+
+export default () => {
+  const [isChecked, setIsChecked] = useState(false);
+  return (
+    <Switch
+      controll
+      isChecked={isChecked}
+      onChange={(val) => {
+        setIsChecked(val);
+      }}
+    />
+  );
+};
+```
+
 ## API
 
 <API id="Switch"></API>

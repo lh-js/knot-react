@@ -1,6 +1,6 @@
 {
   "name": "lh-ui-react",
-  "version": "0.0.10-beta.1",
+  "version": "0.0.11-beta.1",
   "description": "A react library developed with dumi",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -38,7 +38,7 @@
     "@types/react": "^18.0.0",
     "@types/react-dom": "^18.0.0",
     "@umijs/lint": "^4.0.0",
-    "dumi": "^2.2.0",
+    "dumi": "^2.2.4",
     "eslint": "^8.23.0",
     "father": "^4.1.0",
     "husky": "^8.0.1",

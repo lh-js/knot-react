@@ -10,12 +10,17 @@ type Param = {
    * @default [0,0]
    */
   gutters?: number[];
+  /**
+   * @description 栅格总数
+   * @default 24
+   */
+  columns?: number;
 };
 
-export default ({ children, gutters = [0, 0] }: Param) => {
+export default ({ children, gutters = [0, 0], columns = 24 }: Param) => {
   const [gutterH, gutterV] = gutters;
   const rowContext = useMemo(
-    () => ({ gutters: [gutterH, gutterV] as [number, number] }),
+    () => ({ gutters: [gutterH, gutterV] as [number, number], columns }),
     [gutterH, gutterV],
   );
   return (

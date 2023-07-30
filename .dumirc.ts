@@ -14,7 +14,8 @@ export default defineConfig({
     ],
     socialLinks: {
       github: 'https://github.com/lh-js/lh-ui-react'
-    }
+    },
+    lastUpdated: true
   },
   apiParser: {},
   resolve: {
@@ -24,5 +25,4 @@ export default defineConfig({
       { type: 'components', dir: './src/components' },
     ]
   },
-
 });

@@ -7,26 +7,41 @@ type RowParam = {
    */
   children?: ReactNode | string;
   /**
-   * @description 栅格占位格数，为 0 时相当于 display: none（24格数占100%）
+   * @description 栅格占位格数
    */
-  span: number;
+  span: number | 'auto';
   /**
    * @description 栅格左侧的间隔格数，间隔内不可以有栅格
+   * @default 0
    */
   offset?: number;
+  /**
+   * @description 是否填满剩下空间
+   * @default false
+   */
+  fill?: boolean;
 };
 
-export default ({ children, span, offset = 0 }: RowParam) => {
-  const { gutters } = React.useContext(RowContext);
+export default ({ children, span, offset = 0, fill = false }: RowParam) => {
+  const { gutters, columns } = React.useContext(RowContext);
+
+  const getSpan = (span: number | string) => {
+    console.log(typeof span);
+    if (typeof span === 'number') {
+      return `${(span / columns) * 100}%`;
+    } else {
+      return 'auto';
+    }
+  };
   return (
     <div
       className="row"
       children={children}
       style={{
         //@ts-ignore
-        '--span': `${(span / 24) * 100}%`,
+        '--span': getSpan(span),
         '--gutterH': `${gutters && gutters[0]}px`,
-        '--offset': `${(offset / 24) * 100}%`,
+        '--offset': `${(offset / columns) * 100}%`,
       }}
     ></div>
   );

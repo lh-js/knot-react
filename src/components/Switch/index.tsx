@@ -23,9 +23,13 @@ type Param = {
   onText?: string;
   /**
    * @description 关闭状态显示（文字最大长度为1）
-   * @default
    */
   offText?: string;
+  /**
+   * @description 状态是否完全由父组件维护
+   * @default false
+   */
+  controll?: boolean;
   /**
    * @description 状态改变回调函数
    */
@@ -38,21 +42,27 @@ export default ({
   disabled = false,
   onText = '',
   offText = '',
+  controll = false,
   onChange,
 }: Param) => {
   const [isOn, setIsOn] = useState(isChecked);
 
   const switchClick = () => {
     if (disabled) return;
-    onChange && onChange(!isOn);
-    setIsOn(!isOn);
+    onChange && onChange(!getValue(controll));
+    if (controll) return;
+    setIsOn(!getValue(controll));
+  };
+
+  const getValue = (controll: boolean) => {
+    return controll ? isChecked : isOn;
   };
 
   return (
     <OutWave disabled={disabled}>
       <div
         className={`switch ${disabled ? 'disabled' : ''} ${
-          isOn ? 'on-color' : 'off-color'
+          getValue(controll) ? 'on-color' : 'off-color'
         }`}
         style={{
           //定义css变量，忽略ts检查
@@ -61,7 +71,7 @@ export default ({
           '--height': `${size * 22}px`, //按钮高度
           '--circleWidth': `${size * (22 - 4)}px`, //圆形label直径
           '--circleRight': `${2 * size}px`, //圆形label到边缘距离
-          '--translateX': isOn ? 0 : `${-22 * size}px`, //label移动距离
+          '--translateX': getValue(controll) ? 0 : `${-22 * size}px`, //label移动距离
           '--textPadding': `${size * 8}px`, //文字距离边缘距离
           '--textSize': `${size * 12}px`, //文字大小
           '--onText': onText,
