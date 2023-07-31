@@ -1,5 +1,7 @@
 # lh-ui-react
 
+![AUR last modified](https://img.shields.io/aur/last-modified/:lh-ui-react)
+
 # 快速上手
 
 ## 相关技术
