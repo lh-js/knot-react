@@ -1,0 +1,42 @@
+.divider {
+  display: flex;
+  align-items: center;
+  margin: 16px 0;
+  box-sizing: border-box;
+  color: rgba(@black-color, 0.88);
+  font-size: 14px;
+  line-height: 1;
+  list-style: none;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, 'Noto Sans', sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+  // border-block-start: 1px solid rgba(@black-color, 0.06);
+  white-space: nowrap;
+  text-align: center;
+  clear: both;
+
+  &::before {
+    position: relative;
+    width: 50%;
+    border-block-start: 1px solid transparent;
+    border-block-start-color: inherit;
+    border-block-end: 0;
+    transform: translateY(50%);
+    content: '';
+  }
+
+  &::after {
+    position: relative;
+    width: 50%;
+    border-block-start: 1px solid transparent;
+    border-block-start-color: inherit;
+    border-block-end: 0;
+    transform: translateY(50%);
+    content: '';
+  }
+
+  .divider-children {
+    display: inline-block;
+    padding: 0 1em;
+  }
+}
