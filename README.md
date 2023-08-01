@@ -1,6 +1,9 @@
 # lh-ui-react
 
-![AUR last modified](https://img.shields.io/aur/last-modified/:lh-ui-react)
+![npm](https://img.shields.io/npm/v/lh-ui-react)
+![npm](https://img.shields.io/npm/dw/lh-ui-react)
+![npm bundle size](https://img.shields.io/bundlephobia/minzip/lh-ui-react)
+![NPM](https://img.shields.io/npm/l/lh-ui-react)
 
 # 快速上手
 
