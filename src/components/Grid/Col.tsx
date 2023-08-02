@@ -26,7 +26,6 @@ export default ({ children, span, offset = 0, fill = false }: RowParam) => {
   const { gutters, columns } = React.useContext(RowContext);
 
   const getSpan = (span: number | string) => {
-    console.log(typeof span);
     if (typeof span === 'number') {
       return `${(span / columns) * 100}%`;
     } else {
