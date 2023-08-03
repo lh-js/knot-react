@@ -58,10 +58,10 @@ import { Divider } from 'lh-ui-react';
 export default () => {
   return (
     <>
-      <Divider orientation="left" orientationMargin={0}>
+      <Divider orientation="left" textMargin={0}>
         text
       </Divider>
-      <Divider orientation="right" orientationMargin={0}>
+      <Divider orientation="right" textMargin={0}>
         text
       </Divider>
     </>
@@ -85,6 +85,14 @@ export default () => {
     </>
   );
 };
+```
+
+## 分割线颜色:
+
+```tsx
+import { Divider } from 'lh-ui-react';
+
+export default () => <Divider lineColor="red">text</Divider>;
 ```
 
 ## API

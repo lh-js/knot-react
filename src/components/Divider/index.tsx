@@ -19,31 +19,40 @@ type Param = {
    * @description 分割线标题离边缘的距离(百分比，仅orientation不为center时生效)
    * @default 5
    */
-  orientationMargin?: number;
+  textMargin?: number;
   /**
    * @description 分割线类型
    * @default horizontal
    */
   type?: 'vertical' | 'horizontal';
+  /**
+   * @description 分割线颜色
+   * @default  rgba(0,0,0,0.1)
+   */
+  lineColor?: string;
 };
 export default ({
   children,
   dashed = false,
   orientation = 'center',
-  orientationMargin = 5,
+  textMargin = 5,
   type = 'horizontal',
+  lineColor,
 }: Param) => {
   return (
     <div
       className={`divider ${children ? 'has-child' : ''} ${
         dashed ? 'dashed' : ''
-      } ${type === 'horizontal' ? orientation : ''} ${type}`}
+      } ${type === 'horizontal' ? orientation : ''} ${type} ${
+        lineColor ? 'line-color' : ''
+      }`}
       style={{
         //@ts-ignore
-        '--orientationMargin': `${orientationMargin}%`,
+        '--textMargin': `${textMargin}%`,
+        '--lineColor': lineColor,
       }}
     >
-      <span className="divider-children">{children}</span>
+      {children ? <span className="divider-children">{children}</span> : null}
     </div>
   );
 };

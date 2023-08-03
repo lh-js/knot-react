@@ -11,7 +11,8 @@
   cursor: pointer;
   transition: 0.3s;
 
-  &:not(.disabled):hover {
+  &:not(.disabled):hover,
+  &:has(.dashed .text):not(.disabled):hover {
     color: @main-color;
     border-color: currentColor;
   }
@@ -20,18 +21,8 @@
     border: 1px dashed;
   }
 
-  &:where(.dashed):not(.disabled):hover {
-    color: @main-color;
-    border-color: currentColor;
-  }
-
   &:where(.text) {
     border: none;
-  }
-
-  &:where(.text):not(.disabled):hover {
-    color: @main-color;
-    border-color: currentColor;
   }
 
   &:where(.primary) {
