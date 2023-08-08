@@ -7,7 +7,7 @@ export default defineConfig({
   publicPath: process.env.NODE_ENV === 'production' ? `/${repo}/` : '/',
   themeConfig: {
     name: 'lh-ui-react',
-    logo: 'https://xh-bot.com/img/lh-ui-react-logo.png', // 读取public文件夹
+    logo: 'logo.png', // 读取public文件夹
     nav: [
       { title: '指南', link: '/guide' },
       { title: '组件', link: '/components/hello' },

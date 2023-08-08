@@ -88,6 +88,8 @@ export default () => {
 };
 ```
 
+## 状态由父组件维护
+
 ```tsx
 import { Switch } from 'lh-ui-react';
 import { useState } from 'react';

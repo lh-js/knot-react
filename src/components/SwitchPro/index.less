@@ -1,0 +1,61 @@
+.switch-pro {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: var(--width);
+  height: var(--height);
+  border-radius: calc(var(--height) / 2);
+  transition: all 0.5s ease-in-out;
+  // overflow: hidden;//safari浏览器短暂失效，猜测是受到过渡属性影响，替换为以下属性
+  contain: paint;
+  cursor: pointer;
+
+  .switch-pro-label {
+    width: calc(var(--width) * 3 / 2);
+    height: var(--height);
+    position: absolute;
+    transform: translateX(var(--translateX));
+    transition: all 0.5s ease-in-out;
+    display: flex;
+    align-items: center;
+    font-size: var(--textSize);
+    color: @white-color;
+
+    .on-text {
+      position: absolute;
+      left: var(--textPadding);
+    }
+
+    .off-text {
+      position: absolute;
+      right: var(--textPadding);
+    }
+
+    &::after {
+      position: relative;
+      left: var(--circleLeft);
+      width: var(--circleWidth);
+      height: var(--circleWidth);
+      border-radius: var(--circleWidth);
+      background-color: @white-color;
+      display: block;
+      content: '';
+    }
+  }
+}
+
+.on-color {
+  .background-opacity(@main-color,1);
+
+  &:not(.disabled):hover {
+    .background-opacity(@main-color,0.85);
+  }
+}
+
+.off-color {
+  .background-opacity(@black-color,0.25);
+
+  &:not(.disabled):hover {
+    .background-opacity(@black-color,0.45);
+  }
+}

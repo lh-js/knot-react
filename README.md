@@ -13,6 +13,9 @@
 [![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/lh-js/lh-ui-react/ci.yml)](https://github.com/lh-js/lh-ui-react)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/lh-js/lh-ui-react)](https://github.com/lh-js/lh-ui-react)
 [![GitHub issues](https://img.shields.io/github/issues/lh-js/lh-ui-react)](https://github.com/lh-js/lh-ui-react)
+[![GitHub forks](https://img.shields.io/github/forks/lh-js/lh-ui-react)](https://github.com/lh-js/lh-ui-react)
+[![GitHub Repo stars](https://img.shields.io/github/stars/lh-js/lh-ui-react)](https://github.com/lh-js/lh-ui-react)
+[![GitHub watchers](https://img.shields.io/github/watchers/lh-js/lh-ui-react)](https://github.com/lh-js/lh-ui-react)
 <br/><br/>
 ![](https://komarev.com/ghpvc/?username=lh-js&color=dc143c)
 
