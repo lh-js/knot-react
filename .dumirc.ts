@@ -7,7 +7,7 @@ export default defineConfig({
   publicPath: process.env.NODE_ENV === 'production' ? `/${repo}/` : '/',
   themeConfig: {
     name: 'knot react',
-    logo: process.env.NODE_ENV === 'production' ? `logo.png` : 'logo.png', // 读取public文件夹
+    logo: process.env.NODE_ENV === 'production' ? `${repo}/logo.png` : 'logo.png', // 读取public文件夹
     nav: [
       { title: '指南', link: '/guide' },
       { title: '组件', link: '/components/hello' },
