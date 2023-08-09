@@ -1,6 +1,6 @@
 import { defineConfig } from 'dumi';
 
-const repo = 'lh-ui-react'
+const repo = 'knot-react'
 export default defineConfig({
   outputPath: 'docs-dist',
   base: process.env.NODE_ENV === 'production' ? `/${repo}/` : '/',
