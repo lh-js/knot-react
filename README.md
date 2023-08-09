@@ -47,4 +47,4 @@ export default () => <Hello title="Hello React!" />;
 
 ## 使用文档
 
-https://lh-js.github.io/lh-ui-react
+https://lh-js.github.io/knot-react
