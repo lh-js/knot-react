@@ -23,5 +23,5 @@ export default () => <SwitchPro />;
 ```tsx
 import { SwitchPro } from 'lh-ui-react';
 
-export default () => <SwitchPro size={2} />;
+export default () => <SwitchPro size={10} />;
 ```

@@ -12,14 +12,15 @@ export default ({ size = 1 }: Param) => {
 
   return (
     <div
-      className={`switch-pro ${isOn ? 'on-color' : 'off-color'}`}
+      className={`switch-pro ${isOn ? 'is-on' : ''}`}
       style={{
         //定义css变量，忽略ts检查
         //@ts-ignore
         '--width': `${size * 44}px`, //按钮宽度
         '--height': `${size * 22}px`, //按钮高度
-        '--circleWidth': `${size * (22 - 4)}px`, //圆形label直径
-        '--circleLeft': `${24 * size}px`, //圆形label到边缘距离
+        '--borderWidth':`${size * 2}px`, //label边框宽度
+        '--borderColor': isOn ? "#1677ff" : "rgba(0,0,0,0.45)",
+        '--circleLeft': `${22 * size}px`, //圆形label到边缘距离
         '--translateX': isOn ? 0 : `${-22 * size}px`, //label移动距离
         '--textPadding': `${size * 8}px`, //文字距离边缘距离
         '--textSize': `${size * 12}px`, //文字大小

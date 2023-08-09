@@ -20,6 +20,11 @@
     align-items: center;
     font-size: var(--textSize);
     color: @white-color;
+    background: linear-gradient(to right, @main-color 50%, rgba(@black-color,0.45) 50%);
+
+    &:hover {
+      opacity: 0.85;
+    }
 
     .on-text {
       position: absolute;
@@ -34,28 +39,15 @@
     &::after {
       position: relative;
       left: var(--circleLeft);
-      width: var(--circleWidth);
-      height: var(--circleWidth);
-      border-radius: var(--circleWidth);
+      width: var(--height);
+      height: var(--height);
+      border-radius: var(--height);
       background-color: @white-color;
       display: block;
       content: '';
+      border: var(--borderWidth) solid var(--borderColor);
+      box-sizing: border-box;
+      transition: all 0.5s ease-in-out;
     }
-  }
-}
-
-.on-color {
-  .background-opacity(@main-color,1);
-
-  &:not(.disabled):hover {
-    .background-opacity(@main-color,0.85);
-  }
-}
-
-.off-color {
-  .background-opacity(@black-color,0.25);
-
-  &:not(.disabled):hover {
-    .background-opacity(@black-color,0.45);
   }
 }
