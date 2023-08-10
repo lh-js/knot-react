@@ -4,7 +4,7 @@ nav:
   path: /components
 
 group:
-  title: Hello
+  title: 欢迎
   order: 0
 ---
 
@@ -15,5 +15,5 @@ This is an example component.
 ```jsx
 import { Hello } from 'knot-react';
 
-export default () => <Hello title="Hello React!" />;
+export default () => <Hello title="Hello knot!" />;
 ```

@@ -1,5 +1,11 @@
 # knot-react
 
+# 介绍
+
+A react library developed with dumi
+
+#
+
 [![npm](https://img.shields.io/npm/v/knot-react)](https://www.npmjs.com/package/knot-react)
 [![npm](https://img.shields.io/npm/dw/knot-react)](https://www.npmjs.com/package/knot-react)
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/knot-react)](https://www.npmjs.com/package/knot-react)
@@ -12,12 +18,11 @@
 [![GitHub language count](https://img.shields.io/github/languages/count/lh-js/knot-react)](https://github.com/lh-js/knot-react)
 [![GitHub Workflow Status (with event)](https://img.shields.io/github/actions/workflow/status/lh-js/knot-react/ci.yml)](https://github.com/lh-js/knot-react)
 [![GitHub pull requests](https://img.shields.io/github/issues-pr/lh-js/knot-react)](https://github.com/lh-js/knot-react)
-[![GitHub issues](https://img.shields.io/github/issues/lh-js/knot-react)](https://github.com/lh-js/knot-react)
-[![GitHub forks](https://img.shields.io/github/forks/lh-js/knot-react)](https://github.com/lh-js/knot-react)
 [![GitHub Repo stars](https://img.shields.io/github/stars/lh-js/knot-react)](https://github.com/lh-js/knot-react)
-[![GitHub watchers](https://img.shields.io/github/watchers/lh-js/knot-react)](https://github.com/lh-js/knot-react)
 <br/><br/>
 ![](https://komarev.com/ghpvc/?username=lh-js&color=dc143c)
+
+#
 
 # 快速上手
 
@@ -48,3 +53,7 @@ export default () => <Hello title="Hello React!" />;
 ## 使用文档
 
 https://lh-js.github.io/knot-react
+
+## 参与贡献
+
+1.Fork 本仓库 <br/><br/>2.新建 Feat_xxx 分支 <br/><br/>3.提交代码 <br/><br/>4.新建 Pull Request
