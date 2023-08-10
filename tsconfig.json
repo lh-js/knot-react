@@ -7,10 +7,21 @@
     "jsx": "react",
     "baseUrl": "./",
     "paths": {
-      "@@/*": [".dumi/tmp/*"],
-      "lh-ui-react": ["src"],
-      "lh-ui-react/*": ["src/*", "*"]
+      "@@/*": [
+        ".dumi/tmp/*"
+      ],
+      "knot-react": [
+        "src"
+      ],
+      "knot-react/*": [
+        "src/*",
+        "*"
+      ]
     }
   },
-  "include": [".dumi/**/*", ".dumirc.ts", "src/**/*"]
+  "include": [
+    ".dumi/**/*",
+    ".dumirc.ts",
+    "src/**/*"
+  ]
 }

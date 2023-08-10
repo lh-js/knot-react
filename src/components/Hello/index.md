@@ -13,7 +13,7 @@ group:
 This is an example component.
 
 ```jsx
-import { Hello } from 'lh-ui-react';
+import { Hello } from 'knot-react';
 
 export default () => <Hello title="Hello React!" />;
 ```

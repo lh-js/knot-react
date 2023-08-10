@@ -13,7 +13,7 @@ group:
 ## 基本使用:
 
 ```tsx
-import { OutWave } from 'lh-ui-react';
+import { OutWave } from 'knot-react';
 
 export default () => {
   function App() {
@@ -30,7 +30,7 @@ export default () => {
 ## 波纹类型:
 
 ```tsx
-import { OutWave, Space } from 'lh-ui-react';
+import { OutWave, Space } from 'knot-react';
 
 export default () => {
   function App() {

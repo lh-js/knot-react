@@ -13,7 +13,7 @@ group:
 ## 基本使用:
 
 ```tsx
-import { Divider } from 'lh-ui-react';
+import { Divider } from 'knot-react';
 
 export default () => <Divider></Divider>;
 ```
@@ -21,7 +21,7 @@ export default () => <Divider></Divider>;
 ## 加文字:
 
 ```tsx
-import { Divider } from 'lh-ui-react';
+import { Divider } from 'knot-react';
 
 export default () => <Divider>text</Divider>;
 ```
@@ -29,7 +29,7 @@ export default () => <Divider>text</Divider>;
 ## 虚线分割线:
 
 ```tsx
-import { Divider } from 'lh-ui-react';
+import { Divider } from 'knot-react';
 
 export default () => <Divider dashed></Divider>;
 ```
@@ -37,7 +37,7 @@ export default () => <Divider dashed></Divider>;
 ## 标题位置:
 
 ```tsx
-import { Divider } from 'lh-ui-react';
+import { Divider } from 'knot-react';
 
 export default () => {
   return (
@@ -53,7 +53,7 @@ export default () => {
 ## 离边缘距离:
 
 ```tsx
-import { Divider } from 'lh-ui-react';
+import { Divider } from 'knot-react';
 
 export default () => {
   return (
@@ -72,7 +72,7 @@ export default () => {
 ## 垂直分割线:
 
 ```tsx
-import { Divider } from 'lh-ui-react';
+import { Divider } from 'knot-react';
 
 export default () => {
   return (
@@ -90,7 +90,7 @@ export default () => {
 ## 分割线颜色:
 
 ```tsx
-import { Divider } from 'lh-ui-react';
+import { Divider } from 'knot-react';
 
 export default () => <Divider lineColor="red">text</Divider>;
 ```

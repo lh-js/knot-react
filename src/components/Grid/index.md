@@ -13,7 +13,7 @@ group:
 ## 基本使用:
 
 ```tsx
-import { Col, Row } from 'lh-ui-react';
+import { Col, Row } from 'knot-react';
 
 export default () => {
   return (
@@ -38,7 +38,7 @@ export default () => {
 ## 偏移:
 
 ```tsx
-import { Col, Row } from 'lh-ui-react';
+import { Col, Row } from 'knot-react';
 
 export default () => {
   return (
@@ -57,7 +57,7 @@ export default () => {
 ## 设置栅格总数:
 
 ```tsx
-import { Col, Row } from 'lh-ui-react';
+import { Col, Row } from 'knot-react';
 
 export default () => {
   return (
@@ -76,7 +76,7 @@ export default () => {
 ## 设置自动填充:
 
 ```tsx
-import { Col, Row } from 'lh-ui-react';
+import { Col, Row } from 'knot-react';
 
 export default () => {
   return (
