@@ -56,17 +56,17 @@
 }
 
 .on-color {
-  .background-opacity(@main-color,1);
+  background: @main-color;
 
   &:not(.disabled):hover {
-    .background-opacity(@main-color,0.85);
+    background: rgba(@main-color, 0.85);
   }
 }
 
 .off-color {
-  .background-opacity(@black-color,0.25);
+  background: rgba(@black-color, 0.25);
 
   &:not(.disabled):hover {
-    .background-opacity(@black-color,0.45);
+    background: rgba(@black-color, 0.45);
   }
 }

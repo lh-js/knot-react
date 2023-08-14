@@ -13,7 +13,7 @@ group:
 ## 基本使用:
 
 ```tsx
-import { Space } from 'lh-ui-react';
+import { Space } from 'knot-react';
 
 export default () => {
   return (
@@ -28,7 +28,7 @@ export default () => {
 ## 间距方向:
 
 ```tsx
-import { Space } from 'lh-ui-react';
+import { Space } from 'knot-react';
 
 export default () => {
   return (
@@ -43,7 +43,7 @@ export default () => {
 ## 间距大小:
 
 ```tsx
-import { Space } from 'lh-ui-react';
+import { Space } from 'knot-react';
 
 export default () => {
   return (
@@ -58,7 +58,7 @@ export default () => {
 ## 自动换行:
 
 ```tsx
-import { Space } from 'lh-ui-react';
+import { Space } from 'knot-react';
 
 export default () => {
   return (

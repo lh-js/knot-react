@@ -13,7 +13,7 @@ group:
 ## 基本使用:
 
 ```tsx
-import { Switch } from 'lh-ui-react';
+import { Switch } from 'knot-react';
 
 export default () => <Switch />;
 ```
@@ -21,7 +21,7 @@ export default () => <Switch />;
 ## 禁用:
 
 ```tsx
-import { Switch } from 'lh-ui-react';
+import { Switch } from 'knot-react';
 
 export default () => <Switch disabled />;
 ```
@@ -29,7 +29,7 @@ export default () => <Switch disabled />;
 ## 大小定义:
 
 ```tsx
-import { Switch } from 'lh-ui-react';
+import { Switch } from 'knot-react';
 
 export default () => <Switch size={2} />;
 ```
@@ -37,7 +37,7 @@ export default () => <Switch size={2} />;
 ## 传入文字:
 
 ```tsx
-import { Switch } from 'lh-ui-react';
+import { Switch } from 'knot-react';
 
 export default () => <Switch onText="开" offText="关" />;
 ```
@@ -45,7 +45,7 @@ export default () => <Switch onText="开" offText="关" />;
 ## 传入 svg 图片:
 
 ```tsx
-import { Switch } from 'lh-ui-react';
+import { Switch } from 'knot-react';
 
 export default () => {
   const onStatus = (
@@ -91,7 +91,7 @@ export default () => {
 ## 状态由父组件维护
 
 ```tsx
-import { Switch } from 'lh-ui-react';
+import { Switch } from 'knot-react';
 import { useState } from 'react';
 
 export default () => {

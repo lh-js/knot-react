@@ -1,7 +1,7 @@
 const fs = require('fs')
 
 //在组件包中引入打包后的样式
-updateFile('./dist/index.js', 1, "import './umd/lh-ui-react.min.css'")
+updateFile('./dist/index.js', 2, "import './umd/knot-react.min.css'")
 
 const fileObjects = [
   { filePath: './dist/umd', fileType: 'js' },

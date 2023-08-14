@@ -13,19 +13,19 @@ nav:
 ## 安装
 
 ```bash
-npm i lh-ui-react
+npm i knot-react
 ```
 
 or
 
 ```bash
-yarn add lh-ui-react
+yarn add knot-react
 ```
 
 ## 使用示例
 
 ```bash
-import { Hello } from 'lh-ui-react';
+import { Hello } from 'knot-react';
 
 export default () => <Hello title="Hello React!" />;
 ```

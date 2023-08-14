@@ -13,7 +13,7 @@ group:
 ## 基本使用:
 
 ```tsx
-import { Button } from 'lh-ui-react';
+import { Button } from 'knot-react';
 
 export default () => <Button />;
 ```
@@ -21,7 +21,7 @@ export default () => <Button />;
 ## 按钮类型:
 
 ```tsx
-import { Button, Space } from 'lh-ui-react';
+import { Button, Space } from 'knot-react';
 
 export default () => (
   <Space wrap>
@@ -39,7 +39,7 @@ export default () => (
 ## 禁用:
 
 ```tsx
-import { Button } from 'lh-ui-react';
+import { Button } from 'knot-react';
 
 export default () => <Button disabled />;
 ```

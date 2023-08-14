@@ -1,4 +1,4 @@
-import { OutWave } from 'lh-ui-react';
+import { OutWave } from 'knot-react';
 import React, { useState } from 'react';
 type Param = {
   /**

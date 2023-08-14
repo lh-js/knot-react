@@ -13,7 +13,7 @@ group:
 ## 基本使用:
 
 ```tsx
-import { SwitchPro } from 'lh-ui-react';
+import { SwitchPro } from 'knot-react';
 
 export default () => <SwitchPro />;
 ```
@@ -21,7 +21,7 @@ export default () => <SwitchPro />;
 ## 大小定义:
 
 ```tsx
-import { SwitchPro } from 'lh-ui-react';
+import { SwitchPro } from 'knot-react';
 
 export default () => <SwitchPro size={10} />;
 ```
