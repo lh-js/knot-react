@@ -15,7 +15,7 @@ group:
 ```tsx
 import { NumberScroll } from 'knot-react';
 
-export default () => <NumberScroll number={9} />;
+export default () => <NumberScroll startTransTime={9} number={9} />;
 ```
 
 ## 大小设置:
