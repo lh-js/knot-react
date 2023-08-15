@@ -53,16 +53,24 @@ export default () => <NumberScroll number={99} spaceSize={20} />;
 ## 动态数字:
 
 ```tsx
-import { NumberScroll,Button } from 'knot-react';
-import {useState} from 'react'
+import { NumberScroll } from 'knot-react';
+import { useEffect, useState } from 'react';
 
 export default () => {
-
-  const [num,setNum] = useState(0)
-  return <>
-    <Button onClick={()=>setNum((num)=>num+1)}>点击</Button>
-    <NumberScroll number={num} size={10} />
-  </>
+  const [num, setNum] = useState(0);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setNum((num) => (num < 99 ? num + 1 : 0));
+    }, 1000);
+    return () => {
+      clearInterval(timer);
+    };
+  }, [num]);
+  return (
+    <>
+      <NumberScroll number={num} size={10} />
+    </>
+  );
 };
 ```
 

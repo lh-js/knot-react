@@ -16,21 +16,26 @@ type Param = {
    */
   transTime?: number;
   /**
-  * @description 初始化动画过渡时间
-  * @default 0
-  */
+   * @description 初始化动画过渡时间
+   * @default 0
+   */
   startTransTime?: number;
 };
-export default ({ size = 1, number = 5, transTime = 1,startTransTime = 0 }: Param) => {
+export default ({
+  size = 1,
+  number = 5,
+  transTime = 1,
+  startTransTime = 0,
+}: Param) => {
   const [num, setNum] = useState(0);
-  const [trans,setTrans] = useState(startTransTime)
+  const [trans, setTrans] = useState(startTransTime);
   const numList = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
   useEffect(() => {
     setNum(number);
-    setTimeout(()=>{
-      setTrans(transTime)
-    },startTransTime)
+    setTimeout(() => {
+      setTrans(transTime);
+    }, startTransTime);
   }, [number]);
 
   return (

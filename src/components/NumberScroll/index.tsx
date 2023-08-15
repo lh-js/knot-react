@@ -13,9 +13,9 @@ type Param = {
    */
   size?: number;
   /**
-    * @description 初始化动画过渡时间
-    * @default 0
-    */
+   * @description 初始化动画过渡时间
+   * @default 0
+   */
   startTransTime?: number;
   /**
    * @description 过渡时间
