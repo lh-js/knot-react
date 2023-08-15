@@ -22,7 +22,7 @@ export default ({ size = 1, number = 5, transTime = 1 }: Param) => {
 
   useEffect(() => {
     setNum(number);
-  }, []);
+  }, [number]);
 
   return (
     <div

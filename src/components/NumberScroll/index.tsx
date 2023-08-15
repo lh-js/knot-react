@@ -34,7 +34,7 @@ export default ({
   useEffect(() => {
     numToList(number);
     getTransTime(transTime);
-  }, []);
+  }, [number,transTime]);
   const numToList = (num: number) => {
     const list = num
       .toString()
