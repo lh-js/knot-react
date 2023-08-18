@@ -1,6 +1,6 @@
 {
   "name": "knot-react",
-  "version": "0.0.8-beta.1",
+  "version": "0.0.9-beta.1",
   "description": "A react library developed with dumi",
   "module": "dist/index.js",
   "types": "dist/index.d.ts",

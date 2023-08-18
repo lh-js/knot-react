@@ -22,6 +22,14 @@
   &:where(.wrap) {
     flex-wrap: wrap;
   }
+ 
+  &:where(.reverse):not(.vertical) {
+    flex-direction:row-reverse;
+  }
+
+  &:where(.reverse) {
+    flex-direction:column-reverse;
+  }
 
   .item {
     width: 100px;

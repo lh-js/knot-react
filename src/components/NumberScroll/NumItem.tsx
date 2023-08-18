@@ -25,17 +25,12 @@ export default ({
   size = 1,
   number = 5,
   transTime = 1,
-  startTransTime = 0,
 }: Param) => {
   const [num, setNum] = useState(0);
-  const [trans, setTrans] = useState(startTransTime);
   const numList = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 
   useEffect(() => {
     setNum(number);
-    setTimeout(() => {
-      setTrans(transTime);
-    }, startTransTime);
   }, [number]);
 
   return (
@@ -44,7 +39,7 @@ export default ({
       style={{
         //@ts-ignore
         '--transform': `-${num * 10}%`,
-        '--transTime': `${trans}s`,
+        '--transTime': `${transTime}s`,
         '--height': `${size * 20}px`,
         '--width': `${size * 16}px`,
         '--fontSize': `${size * 14}px`,

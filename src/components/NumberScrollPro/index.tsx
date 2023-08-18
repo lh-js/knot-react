@@ -1,4 +1,6 @@
 import React from 'react';
+import Item from './Item';
+import Space from '../Space';
 
 type Param = {
   /**
@@ -15,37 +17,26 @@ type Param = {
    * @default 1
    */
   transTime?: number;
+  /**
+   * @description 主轴间距大小
+   * @default 5
+   */
+  spaceSize?: number;
+  /**
+   * @description 数字渐进过渡
+   * @default false
+   */
+  gradualTrans?: boolean;
 };
 export default ({
   size = 1,
   number = 5,
   transTime = 1,
+  spaceSize = 5,
+  gradualTrans = false
 }: Param) => {
-
-  return (
-    <div className="scorll-pro-box" 
-    style={{
-      //@ts-ignore
-      '--transform': `${number * 36}deg`,
-      '--translateZ': `${size * 30}px`,
-      '--transTime': `${transTime}s`,
-      '--height': `${size * 20}px`,
-      '--width': `${size * 16}px`,
-      '--fontSize': `${size * 14}px`,
-      '--borderRadius': `${size * 3}px`,
-    }}>
-        <section>
-            <div>0</div>
-            <div>9</div>
-            <div>8</div>
-            <div>7</div>
-            <div>6</div>
-            <div>5</div>
-            <div>4</div>
-            <div>3</div>
-            <div>2</div>
-            <div>1</div>
-        </section>
-    </div>
-  );
+  return <Space spaceSize={spaceSize} reverse>
+    {Array.from({ length: number.toString().length }).map((_, index) => <Item key={index}
+      number={gradualTrans ? number / Math.pow(10, index) : Math.floor(number / Math.pow(10, index))} size={size} transTime={transTime} />)}
+  </Space>;
 };

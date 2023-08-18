@@ -13,11 +13,6 @@ type Param = {
    */
   size?: number;
   /**
-   * @description 初始化动画过渡时间
-   * @default 0
-   */
-  startTransTime?: number;
-  /**
    * @description 过渡时间
    * @default 1
    */
@@ -31,7 +26,6 @@ type Param = {
 export default ({
   number = 5,
   size = 1,
-  startTransTime = 0,
   transTime = 1,
   spaceSize = 5,
 }: Param) => {
@@ -39,8 +33,7 @@ export default ({
 
   useEffect(() => {
     numToList(number);
-    getTransTime(transTime);
-  }, [number, transTime]);
+  }, [number]);
   const numToList = (num: number) => {
     const list = num
       .toString()
@@ -73,7 +66,6 @@ export default ({
           number={item}
           size={size}
           transTime={getTransTime(transTime)[index]}
-          startTransTime={getTransTime(startTransTime)[index]}
         />
       ))}
     </Space>

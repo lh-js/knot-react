@@ -30,6 +30,11 @@ type Param = {
    * @default false
    */
   wrap?: boolean;
+  /**
+   * @description 内容反转
+   * @default false
+   */
+  reverse?: boolean;
 };
 export default ({
   children,
@@ -38,10 +43,11 @@ export default ({
   vSpaceSize = 8,
   align = 'center',
   wrap = false,
+  reverse = false
 }: Param) => {
   return (
     <div
-      className={`space ${direction} ${align} ${wrap ? 'wrap' : ''}`}
+      className={`space ${direction} ${align} ${wrap ? 'wrap' : ''} ${reverse ? 'reverse' : ''}`}
       children={children}
       style={{
         //@ts-ignore
