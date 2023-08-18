@@ -40,7 +40,7 @@ export default ({
 
   return (
     <div
-      className="box"
+      className="scorll-box"
       style={{
         //@ts-ignore
         '--transform': `-${num * 10}%`,

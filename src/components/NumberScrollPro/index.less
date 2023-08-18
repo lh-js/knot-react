@@ -1,0 +1,75 @@
+.scorll-pro-box {
+  width: 160px;
+  height: 200px;
+  overflow: hidden;
+  border-radius: 20px;
+
+  section{
+    position: relative;
+    width: 160px;
+    height: 300px;
+    transform-style: preserve-3d;
+    animation: rotate 20s linear infinite;
+  }
+  section:hover{
+    animation-play-state: paused;
+  }
+  section div{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 66%;
+    text-align: center;
+    font-size: 140px;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: @main-color;
+  }
+  section div img{
+    width: 100%;
+    height: 100%;
+  }
+  
+  section div:nth-child(1){
+    transform: rotateX(0deg) translateZ(300px);
+  }
+  section div:nth-child(2){
+    transform: rotateX(36deg) translateZ(300px);
+  }
+  section div:nth-child(3){
+    transform: rotateX(72deg) translateZ(300px);
+  }
+  section div:nth-child(4){
+    transform: rotateX(108deg) translateZ(300px);
+  }
+  section div:nth-child(5){
+    transform: rotateX(144deg) translateZ(300px);
+  }
+  section div:nth-child(6){
+    transform: rotateX(180deg) translateZ(300px);
+  }
+  section div:nth-child(7){
+    transform: rotateX(216deg) translateZ(300px);
+  }
+  section div:nth-child(8){
+    transform: rotateX(252deg) translateZ(300px);
+  }
+  section div:nth-child(9){
+    transform: rotateX(288deg) translateZ(300px);
+  }
+  section div:nth-child(10){
+    transform: rotateX(324deg) translateZ(300px);
+  }
+  
+  @keyframes rotate {
+    0%{
+        transform: rotateX(360deg);
+    }
+    100%{
+        transform: rotateX(0deg);
+    }
+  }
+}
