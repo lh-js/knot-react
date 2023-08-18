@@ -18,9 +18,19 @@ import { useEffect, useState } from 'react';
 
 export default () => {
 
+  const [num, setNum] = useState(0);
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setNum((num) => (num < 99 ? num + 1 : 0));
+    }, 1000);
+    return () => {
+      clearInterval(timer);
+    };
+  }, [num]);
+
   return (
     <>
-      <NumberScrollPro />
+      <NumberScrollPro number={num} size={10} />
     </>
   );
 };
