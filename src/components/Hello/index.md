@@ -8,12 +8,12 @@ group:
   order: 0
 ---
 
-# Hello
+## Hello
 
 This is an example component.
 
 ```jsx
 import { Hello } from 'knot-react';
 
-export default () => <Hello title="Hello knot!" />;
+export default () => <Hello/>;
 ```
