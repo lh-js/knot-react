@@ -12,6 +12,7 @@ export default defineConfig({
       { title: '指南', link: '/guide' },
       { title: '组件', link: '/components/hello' },
       { title: 'hooks', link: '/hooks/use-hello' },
+      { title: 'utils', link: '/utils/hello' },
     ],
     socialLinks: {
       github: 'https://github.com/lh-js/knot-react'
@@ -25,6 +26,7 @@ export default defineConfig({
     atomDirs: [
       { type: 'components', dir: './src/components' },
       { type: 'hooks', dir: './src/hooks' },
+      { type: 'utils', dir: './src/utils' },
     ]
   },
 });

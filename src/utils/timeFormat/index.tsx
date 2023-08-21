@@ -10,7 +10,7 @@ type Param = {
     pattern?: string;
   };
 
-export default function useTimeFormat({time, pattern}:Param) {
+export default function timeFormat({time, pattern}:Param) {
     if (arguments.length === 0 || !time) {
         return null
     }
@@ -47,5 +47,5 @@ export default function useTimeFormat({time, pattern}:Param) {
         }
         return value || 0
     })
-    return {time:time_str}
+    return time_str
 }
