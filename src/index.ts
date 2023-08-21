@@ -14,4 +14,5 @@ export { default as NumberScrollPro} from './components/NumberScrollPro'
 //hooks
 export { default as useHello } from './hooks/useHello'
 //utils
+export { default as hello } from './utils/hello'
 export { default as timeFormat } from './utils/timeFormat'
