@@ -1,7 +1,7 @@
 ---
 nav:
-  title: hooks
-  path: /hooks
+  title: utils
+  path: /utils
 
 group:
   title: 时间格式化
@@ -49,7 +49,7 @@ export default () => {
 import { timeFormat } from 'knot-react';
 
 export default () => {
-  const time = timeFormat({time:new Date(),pattern:'{y}/{m}/{d} {h}:{i}:{s}'});
+  const time = timeFormat({time:new Date(),option:{pattern:'{y}/{m}/{d} {h}:{i}:{s}'}});
   return <h4>{time}</h4>;
 };
 ```

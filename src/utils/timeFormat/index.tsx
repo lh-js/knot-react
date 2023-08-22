@@ -1,51 +1,69 @@
+import timeParse from './timeParse'
+
+type Option = {
+    /**
+     * @description 格式
+     * @default {y}-{m}-{d} {h}:{i}:{s}
+     */
+    pattern?: string;
+    /**
+     * @description 是否显示和现在对比的汉字
+     * @default false
+     */
+    textFormat?: boolean;
+}
+
 type Param = {
     /**
      * @description 时间
      */
     time?: Date | string | number;
     /**
-     * @description 格式
-     * @default {y}-{m}-{d} {h}:{i}:{s}
+     * @description 配置
+     * @default 
      */
-    pattern?: string;
-  };
+    option?: Option;
+};
 
-export default function timeFormat({time, pattern}:Param) {
-    if (arguments.length === 0 || !time) {
-        return null
+export default function timeFormat({ time, option={textFormat:false} }: Param) {
+    if (!option?.textFormat) {
+        return timeParse({ time, pattern: option?.pattern })
     }
-    const format = pattern || '{y}-{m}-{d} {h}:{i}:{s}'
-    let date
-    if (typeof time === 'object') {
-        date = time
+    if (('' + time).length === 10) {
+        time = parseInt(time) * 1000
     } else {
-        if ((typeof time === 'string') && (/^[0-9]+$/.test(time))) {
-            time = parseInt(time)
-        } else if (typeof time === 'string') {
-            time = time.replace(new RegExp(/-/gm), '/').replace('T', ' ').replace(new RegExp(/\.[\d]{3}/gm), '');
-        }
-        if ((typeof time === 'number') && (time.toString().length === 10)) {
-            time = time * 1000
-        }
-        date = new Date(time)
+        time = +time
     }
-    const formatObj: any = {
-        y: date.getFullYear(),
-        m: date.getMonth() + 1,
-        d: date.getDate(),
-        h: date.getHours(),
-        i: date.getMinutes(),
-        s: date.getSeconds(),
-        a: date.getDay()
+    const d = new Date(time)
+    const now = Date.now()
+
+    const diff = (now - d) / 1000
+
+    if (diff < 30) {
+        return '刚刚'
+    } else if (diff < 3600) {
+        // less 1 hour
+        return Math.ceil(diff / 60) + '分钟前'
+    } else if (diff < 3600 * 24) {
+        return Math.ceil(diff / 3600) + '小时前'
+    } else if (diff < 3600 * 24 * 2) {
+        return '1天前'
     }
-    const time_str = format.replace(/{(y|m|d|h|i|s|a)+}/g, (result, key: string) => {
-        let value = formatObj[key]
-        // Note: getDay() returns 0 on Sunday
-        if (key === 'a') { return ['日', '一', '二', '三', '四', '五', '六'][value] }
-        if (result.length > 0 && value < 10) {
-            value = '0' + value
-        }
-        return value || 0
-    })
-    return time_str
+
+    return timeParse({ time, pattern: option.pattern })
+    //   if (option) {
+    //     return timeParse({time, pattern:option})
+    //   } else {
+    //     return (
+    //       d.getMonth() +
+    //       1 +
+    //       '月' +
+    //       d.getDate() +
+    //       '日' +
+    //       d.getHours() +
+    //       '时' +
+    //       d.getMinutes() +
+    //       '分'
+    //     )
+    //   }
 }
