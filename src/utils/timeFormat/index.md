@@ -54,6 +54,18 @@ export default () => {
 };
 ```
 
+## 时间中文返回
+
+```jsx
+import { timeFormat } from 'knot-react';
+
+export default () => {
+  const date = new Date(new Date().getTime() - 30 * 24 * 60 * 60 * 1000)
+  const time = timeFormat({time:date ,option:{pattern:'{y}/{m}/{d} {h}:{i}:{s}',textFormat:true}});
+  return <h4>{time}</h4>;
+};
+```
+
 ## API
 
 <API id="timeFormat"></API>

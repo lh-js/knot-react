@@ -7,7 +7,7 @@ type Option = {
      */
     pattern?: string;
     /**
-     * @description 是否显示和现在对比的汉字
+     * @description 显示中文
      * @default false
      */
     textFormat?: boolean;
@@ -17,7 +17,7 @@ type Param = {
     /**
      * @description 时间
      */
-    time?: Date | string | number;
+    time: Date | string | number;
     /**
      * @description 配置
      * @default 
@@ -25,45 +25,31 @@ type Param = {
     option?: Option;
 };
 
-export default function timeFormat({ time, option={textFormat:false} }: Param) {
+export default function timeFormat({ time, option = { textFormat: false } }: Param) {
     if (!option?.textFormat) {
         return timeParse({ time, pattern: option?.pattern })
     }
-    if (('' + time).length === 10) {
-        time = parseInt(time) * 1000
-    } else {
-        time = +time
+    if (typeof time == 'number') {
+        if ((time.toString().length === 10)) {
+            time = time * 1000
+        } else {
+            time = +time
+        }
     }
-    const d = new Date(time)
+    const d = new Date(time).valueOf()
     const now = Date.now()
 
     const diff = (now - d) / 1000
 
-    if (diff < 30) {
+    if (diff < 60) {
         return '刚刚'
     } else if (diff < 3600) {
-        // less 1 hour
         return Math.ceil(diff / 60) + '分钟前'
     } else if (diff < 3600 * 24) {
-        return Math.ceil(diff / 3600) + '小时前'
-    } else if (diff < 3600 * 24 * 2) {
-        return '1天前'
+        return Math.ceil(diff / 3600) + "小时前"
+    } else if (diff < 3600 * 24 * 31) {
+        return Math.ceil(diff / (3600 * 24)) + "天前"
     }
 
     return timeParse({ time, pattern: option.pattern })
-    //   if (option) {
-    //     return timeParse({time, pattern:option})
-    //   } else {
-    //     return (
-    //       d.getMonth() +
-    //       1 +
-    //       '月' +
-    //       d.getDate() +
-    //       '日' +
-    //       d.getHours() +
-    //       '时' +
-    //       d.getMinutes() +
-    //       '分'
-    //     )
-    //   }
 }
