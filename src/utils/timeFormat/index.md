@@ -16,7 +16,7 @@ group:
 import { timeFormat } from 'knot-react';
 
 export default () => {
-  const time = timeFormat({time:new Date()});
+  const time = timeFormat(new Date());
   return <h4>{time}</h4>;
 };
 ```
@@ -27,7 +27,7 @@ export default () => {
 import { timeFormat } from 'knot-react';
 
 export default () => {
-  const time = timeFormat({time:new Date().getTime()});
+  const time = timeFormat(new Date().getTime());
   return <h4>{time}</h4>;
 };
 ```
@@ -38,7 +38,7 @@ export default () => {
 import { timeFormat } from 'knot-react';
 
 export default () => {
-  const time = timeFormat({time:new Date().getTime().toString()});
+  const time = timeFormat(new Date().getTime().toString());
   return <h4>{time}</h4>;
 };
 ```
@@ -49,7 +49,7 @@ export default () => {
 import { timeFormat } from 'knot-react';
 
 export default () => {
-  const time = timeFormat({time:new Date(),option:{pattern:'{y}/{m}/{d} {h}:{i}:{s}'}});
+  const time = timeFormat(new Date(), { pattern: '{y}/{m}/{d} {h}:{i}:{s}' });
   return <h4>{time}</h4>;
 };
 ```
@@ -60,15 +60,11 @@ export default () => {
 import { timeFormat } from 'knot-react';
 
 export default () => {
-  const date = new Date(new Date().getTime() - 30 * 24 * 60 * 60 * 1000)
-  const time = timeFormat({time:date ,option:{pattern:'{y}/{m}/{d} {h}:{i}:{s}',textFormat:true}});
+  const date = new Date(new Date().getTime() - 30 * 24 * 60 * 60 * 1000);
+  const time = timeFormat(date, {
+    pattern: '{y}/{m}/{d} {h}:{i}:{s}',
+    textFormat: true,
+  });
   return <h4>{time}</h4>;
 };
 ```
-
-## API
-
-<API id="timeFormat"></API>
-
-
-
