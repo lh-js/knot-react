@@ -1,0 +1,48 @@
+.table {
+  table {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: none;
+    border-bottom: var(--border);
+
+    tr {
+      flex: 1;
+      display: flex;
+      border: var(--border);
+      border-bottom: none;
+
+      &:nth-child(even) {
+        background: #f6f6f7;
+      }
+
+      &:last-child {
+        border-right: var(--border);
+      }
+
+      th {
+        flex: 1;
+        text-align: var(--align);
+        border: none;
+        border-right: var(--border);
+        padding: 10px 5px;
+
+        &:last-child {
+          border-right: none;
+        }
+      }
+
+      td {
+        flex: 1;
+        text-align: var(--align);
+        border: none;
+        padding: 10px 5px;
+        border-right: var(--border);
+
+        &:last-child {
+          border-right: none;
+        }
+      }
+    }
+  }
+}

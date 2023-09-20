@@ -25,3 +25,7 @@ import { SwitchPro } from 'knot-react';
 
 export default () => <SwitchPro size={10} />;
 ```
+
+## API
+
+<API id="SwitchPro"></API>

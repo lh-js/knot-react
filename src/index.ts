@@ -9,8 +9,9 @@ export { default as OutWave } from './components/OutWave'
 export { default as Space } from './components/Space'
 export { Col, Row } from './components/Grid'
 export { default as Divider } from './components/Divider'
-export { default as NumberScroll} from './components/NumberScroll'
-export { default as NumberScrollPro} from './components/NumberScrollPro'
+export { default as NumberScroll } from './components/NumberScroll'
+export { default as NumberScrollPro } from './components/NumberScrollPro'
+export { default as Table } from './components/Table'
 //hooks
 export { default as useHello } from './hooks/useHello'
 //utils
