@@ -12,6 +12,7 @@ export { default as Divider } from './components/Divider'
 export { default as NumberScroll } from './components/NumberScroll'
 export { default as NumberScrollPro } from './components/NumberScrollPro'
 export { default as Table } from './components/Table'
+export { default as Avatar } from './components/Avatar'
 //hooks
 export { default as useHello } from './hooks/useHello'
 //utils
