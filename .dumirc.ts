@@ -12,8 +12,8 @@ export default defineConfig({
       { title: '指南', link: '/guide' },
       { title: '组件', link: '/components/hello' },
       { title: 'hooks', link: '/hooks/use-hello' },
-      { title: 'utils', link: '/utils/hello' },
-      { title: 'class', link: '/classes/hello' },
+      { title: 'utils', link: '/utils/hello-util' },
+      { title: 'class', link: '/classes/hello-class' },
     ],
     socialLinks: {
       github: 'https://github.com/lh-js/knot-react'

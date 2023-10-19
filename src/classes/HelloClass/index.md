@@ -13,10 +13,10 @@ group:
 This is an example class.
 
 ```jsx
-import { HelloC } from 'knot-react';
+import { HelloClass } from 'knot-react';
 
 export default () => {
-  const hello = new HelloC("hello");
-  return <h4>{hello.hello()}</h4>;
+  const hello1 = new HelloClass("hello knot!");
+  return <h4>{hello1.say()}</h4>;
 };
 ```

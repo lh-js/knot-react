@@ -1,13 +1,13 @@
-class HelloC {
+class HelloClass {
 
     text: string
     constructor(text: string) {
         this.text = text
     }
 
-    hello() {
+    say() {
         return this.text
     }
 }
 
-export default HelloC;
+export default HelloClass;

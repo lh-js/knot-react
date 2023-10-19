@@ -16,9 +16,9 @@ export { default as Avatar } from './components/Avatar'
 //hooks
 export { default as useHello } from './hooks/useHello'
 //utils
-export { default as hello } from './utils/hello'
+export { default as hello } from './utils/helloUtil'
 export { default as timeFormat } from './utils/timeFormat'
 export { default as deepCopy } from './utils/deepCopy'
 //class
-export { default as HelloC } from './classes/hello'
+export { default as HelloClass } from './classes/HelloClass'
 export { default as SuperTask } from './classes/SuperTask'

@@ -10,7 +10,7 @@ group:
 
 ## useHello
 
-This is an example hooks.
+This is an example hook.
 
 ```jsx
 import { useHello } from 'knot-react';
